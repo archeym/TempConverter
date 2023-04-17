@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var celsiusLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var tempSegmentControler: UISegmentedControl!
     
     @IBOutlet weak var tempSlider: UISlider!{
         didSet{
@@ -43,14 +44,23 @@ class ViewController: UIViewController {
         celsiusLabel.text = "\(celsiusTemp) Cº"
         
         var convertedTempString = ""
-        #warning("switch case, convertedTempString = convertTempFrom(celsius: celsiusTemp)")
+        switch tempSegmentControler.selectedSegmentIndex {
+        case 0:
+            let fahrenheitTempString = String(format: "%.2F", convertTempFrom(celsius: celsiusTemp).fahrenheit)
+            convertedTempString = fahrenheitTempString + " Fº"
+        default:
+            let kelvinTempString = String(format: "%.2F", convertTempFrom(celsius: celsiusTemp).kelvin)
+            convertedTempString = kelvinTempString + " Kº"
+        }
+        resultLabel.text = convertedTempString
     
     }
     
 
     func convertTempFrom(celsius: Int) -> (fahrenheit: Double, kelvin: Double) {
-        #warning("temp calculation logic")
-        return (0,0)
+        let fahrenheit = (Double(celsius) * 9 / 5) + 32
+        let kelvin = Double(celsius) + 273.2
+        return (fahrenheit, kelvin)
     }
 
 }

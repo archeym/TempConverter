@@ -12,11 +12,14 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp Converter from Cº to Fº , Kº" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofi-6R-3IK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="YWA-9m-la2">
+                                <rect key="frame" x="0.0" y="-33.5" width="320" height="635.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp Converter from Cº to Fº , Kº" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofi-6R-3IK">
                                 <rect key="frame" x="72.5" y="124" width="175" height="65"/>
                                 <color key="backgroundColor" red="1" green="0.10832007148182621" blue="0.20868239984675951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -27,7 +30,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C º" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyJ-Fr-e7H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C º" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyJ-Fr-e7H">
                                 <rect key="frame" x="121" y="222" width="78" height="43"/>
                                 <color key="backgroundColor" red="0.83149164919999996" green="0.33564955000000002" blue="0.31222864989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -38,7 +41,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fº" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcE-jj-pzG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fº" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcE-jj-pzG">
                                 <rect key="frame" x="123" y="339" width="74" height="42"/>
                                 <color key="backgroundColor" red="0.83149164919999996" green="0.33564955000000002" blue="0.31222864989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -69,23 +72,38 @@
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IJI-It-H7v"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x52-X1-czs">
+                                <rect key="frame" x="205" y="343" width="50" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstItem="eyt-oV-Ose" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="4xD-QF-HfL"/>
+                            <constraint firstItem="YWA-9m-la2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-146" id="6io-FK-3S4"/>
                             <constraint firstItem="Ofi-6R-3IK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11.5" id="8B7-OT-Tem"/>
                             <constraint firstItem="Ofi-6R-3IK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HgS-k0-tzL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YWA-9m-la2" secondAttribute="trailing" id="Hxg-uB-AQR"/>
+                            <constraint firstItem="YWA-9m-la2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JhK-Yr-ezK"/>
                             <constraint firstItem="9rZ-dt-BvS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aAF-7C-lx2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eyt-oV-Ose" secondAttribute="bottom" constant="57" id="aZ6-6l-5l2"/>
                             <constraint firstItem="eyt-oV-Ose" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bOw-OR-d4I"/>
                             <constraint firstItem="9rZ-dt-BvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="bh2-aO-hSg"/>
                             <constraint firstItem="MyJ-Fr-e7H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h64-6v-hda"/>
                             <constraint firstItem="OcE-jj-pzG" firstAttribute="top" secondItem="9rZ-dt-BvS" secondAttribute="bottom" constant="25" id="iXJ-yh-8wM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YWA-9m-la2" secondAttribute="bottom" constant="-34" id="kFX-p7-9SL"/>
                             <constraint firstItem="OcE-jj-pzG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nrx-7A-XNE"/>
                             <constraint firstItem="9rZ-dt-BvS" firstAttribute="top" secondItem="MyJ-Fr-e7H" secondAttribute="bottom" constant="19" id="rkJ-0o-Kkv"/>
                             <constraint firstItem="MyJ-Fr-e7H" firstAttribute="top" secondItem="Ofi-6R-3IK" secondAttribute="bottom" constant="33" id="uKS-Q0-qla"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="x52-X1-czs"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="TempConverter" id="6CZ-fp-jrt">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="gRh-pT-EL5"/>
@@ -94,12 +112,13 @@
                     <connections>
                         <outlet property="celsiusLabel" destination="MyJ-Fr-e7H" id="4yj-rz-UKP"/>
                         <outlet property="resultLabel" destination="OcE-jj-pzG" id="r6W-ek-ZoR"/>
+                        <outlet property="tempSegmentControler" destination="eyt-oV-Ose" id="XqN-gL-LGH"/>
                         <outlet property="tempSlider" destination="9rZ-dt-BvS" id="drd-hS-4On"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136.25" y="4.225352112676056"/>
+            <point key="canvasLocation" x="1135.2" y="3.6945812807881775"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bx5-Fb-1Pq">
@@ -121,10 +140,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="sun" width="375" height="667"/>
         <image name="sun.max" catalog="system" width="128" height="125"/>
         <image name="sun.max.fill" catalog="system" width="128" height="125"/>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
