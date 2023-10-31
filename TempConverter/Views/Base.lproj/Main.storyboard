@@ -116,6 +116,21 @@
             </objects>
             <point key="canvasLocation" x="983" y="-36"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="rKR-RJ-DPL">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" id="9Zx-ji-93N" customClass="InfoViewController" customModule="TempConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oQU-VE-EHs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Yhr-5b-ilN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9l1-PW-b6d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="-36"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hry-pM-B8b">
             <objects>

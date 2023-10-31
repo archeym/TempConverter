@@ -35,6 +35,13 @@ class ViewController: UIViewController {
     func updateTempLabelFromSlider(value: Float) {
         print("tempSlider:::", Int(value))
         #warning("check which segment controler is on, and make a temp calculation based F,K")
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController else { return }
+        vc.titleString = "text"
+    
+//        present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func convertTempFrom(celsius: Int) -> (fahrenheit: Double, kelvin: Double){
